@@ -29,9 +29,9 @@ Twilio - Send an SMS:
 
 To:
 
-{{ $('Twilio Trigger')..from.replace('whatsapp:', '') }}
+{{ $('Twilio Trigger').item.json.data.from.replace('whatsapp:', '') }}
 
 
 From:
 
-{{ $('Twilio Trigger')..replace('whatsapp:', '') }}
+{{ $('Twilio Trigger').item.json.data.to.replace('whatsapp:', '') }}
