@@ -2,7 +2,7 @@
 
 <img width="1920" height="1080" alt="DEPLOY REACT ON S3 (3)" src="https://github.com/user-attachments/assets/abbc0619-d997-4305-9b6e-bf9fbef39d1d" />
 
-This project sets up a **WhatsApp AI Agent (Customer Support Assistant)** using **n8n**, **OpenAI**, and **Twilio**. The assistant automatically handles customer queries, provides responses based on logic and memory, and can escalate issues when needed.
+This project sets up a **WhatsApp AI Agent (Customer Support Assistant)** using **n8n**, **OpenAI**, **PostgreSQL**, and **Twilio**. The assistant automatically handles customer queries, provides responses based on logic and memory, and can escalate issues when needed.
 
 ## 🔧 Tech Stack
 
