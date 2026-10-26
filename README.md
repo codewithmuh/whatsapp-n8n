@@ -1,8 +1,32 @@
-# whatsapp-n8n
+# WhatsApp AI Customer Support Agent – n8n, OpenAI & Twilio
+
+<p align="center">
+  <a href="https://github.com/codewithmuh/whatsapp-n8n/releases"><img src="https://img.shields.io/github/v/release/codewithmuh/whatsapp-n8n?color=blue&label=version&style=flat-square" alt="GitHub Release"></a>
+  <a href="https://github.com/codewithmuh/whatsapp-n8n/stargazers"><img src="https://img.shields.io/github/stars/codewithmuh/whatsapp-n8n?style=flat-square" alt="Stars"></a>
+  <a href="https://github.com/codewithmuh/whatsapp-n8n/network/members"><img src="https://img.shields.io/github/forks/codewithmuh/whatsapp-n8n?style=flat-square" alt="Forks"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License: MIT"></a>
+  <a href="https://youtube.com/@codewithmuh"><img src="https://img.shields.io/badge/YouTube-%40codewithmuh-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube"></a>
+  <br>
+  <img src="https://img.shields.io/badge/Platform-n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white" alt="n8n">
+  <img src="https://img.shields.io/badge/Messaging-Twilio%20WhatsApp-F22F46?style=flat-square&logo=twilio&logoColor=white" alt="Twilio WhatsApp">
+  <img src="https://img.shields.io/badge/Intelligence-OpenAI%20GPT-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI">
+  <img src="https://img.shields.io/badge/Memory-PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
+</p>
+
+This project sets up a production **WhatsApp AI Agent (Customer Support Assistant)** using **n8n**, **OpenAI**, **PostgreSQL**, and **Twilio**. The assistant automatically handles customer queries, provides responses based on logic and memory, and can escalate issues when needed.
+
+```mermaid
+flowchart LR
+    Customer["Customer on WhatsApp"] --> TwilioIn["Twilio WhatsApp API"]
+    TwilioIn --> N8N["n8n Webhook Trigger"]
+    N8N --> Memory["PostgreSQL Memory<br/>(Conversation History)"]
+    Memory --> OpenAI["OpenAI GPT Model<br/>(Knowledge Base + FAQ Prompt)"]
+    OpenAI --> Clean["Annotation Cleaner<br/>(Custom JavaScript Tool)"]
+    Clean --> TwilioOut["Twilio Message Dispatcher"]
+    TwilioOut --> Customer
+```
 
 <img width="1920" height="1080" alt="DEPLOY REACT ON S3 (3)" src="https://github.com/user-attachments/assets/abbc0619-d997-4305-9b6e-bf9fbef39d1d" />
-
-This project sets up a **WhatsApp AI Agent (Customer Support Assistant)** using **n8n**, **OpenAI**, **PostgreSQL**, and **Twilio**. The assistant automatically handles customer queries, provides responses based on logic and memory, and can escalate issues when needed.
 
 ## 🔧 Tech Stack
 
